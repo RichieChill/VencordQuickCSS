@@ -1,0 +1,22 @@
+/**
+ * Styling changes for the server channels and members lists.
+ */
+
+/* Compact server channels list */
+a[class*="link__"] { padding: 1px 0 !important; }
+
+/* Italicize muted channels */
+[class*="modeMuted__"] {
+  font-style: italic !important;
+  opacity: 0.6 !important;
+}
+
+/* Hide member list completely */
+[class*="membersWrap"] { display: none !important; }
+
+/* Make server icons and user icons square */
+mask { display: none !important; }
+img[class*="icon_"] { border-radius: 6px !important; }
+foreignObject { border-radius: 6px !important; }
+[class*="folderPreviewWrapper__"] { border-radius: 6px !important; }
+[class*="avatar_"] { border-radius: 6px !important; }
