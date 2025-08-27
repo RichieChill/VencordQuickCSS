@@ -1,0 +1,52 @@
+/**
+ * Various other Vencord QuickCSS snippets.
+ */
+
+/* Hide right-click context menu items */
+div[role="group"][class*="wrapper_"] {display: none;}                 /* Reaction quick menu */
+div[role="menuitem"][id="message-apps"] {display: none;}              /* Apps */
+div[role="menuitem"][id="message-tts"] {display: none;}               /* Speak message */
+div[role="menuitem"][id="message-reply"] {display: none;}             /* Reply */
+div[role="menuitem"][id="message-forward"] {display: none;}           /* Forward */
+// div[role="menuitem"][id="message-thread"] {display: none;}         /* Create thread */
+div[role="menuitem"][id="message-mark-unread"] {display: none;}       /* Mark as unread */
+div[role="menuitem"][id="message-add-reaction-1"] {display: none;}    /* Add super reaction */
+div[role="menuitem"][id="message-add-reaction"] {display: none;}      /* Add reaction */
+/* div[role="menuitem"][id="message-add-reaction-0"] {display: none;} /* Add reaction  */ */
+// div[role="menuitem"][id="message-report"] {display: none;}         /* Report message */
+// div[role="menuitem"][id="message-delete"] {display: none;}         /* Delete message */
+// div[role="menuitem"][id="message-copy-link"] {display: none;}      /* Copy message link */
+
+/* Hide 'shop' button in Home */
+a[data-list-item-id*="shop"] { display: none; }
+
+/* Hide 'Nitro' button in Home */
+a[data-list-item-id$="___nitro"] { display: none; }
+button[aria-label="Apps"], 
+button[aria-label="Send a gift"], 
+button[aria-label="Open sticker picker"] { display: none; }
+
+/* Hide 'Explore Discoverable Servers'/'Discover' in server list */
+div[class*="listItem"]:has(div[data-list-item-id="guildsnav___guild-discover-button"])
+{
+  display: none;
+}
+
+/* Hide server boost goal bar */
+.container__0d0f9.containerWithMargin__0d0f9 { display: none !important; }
+
+/* Narrow search bar */
+[class^=searchBar__] { width: 160px !important; }
+
+/* Bigger reactions */
+[id*=message-reactions] [class*=reaction-] .emoji,
+[id*=message-reactions] [class*=reactionCount],
+[class*=effect-] { zoom: 125%; }
+
+/* Hide the 'APP' tag next to bot usernames */
+[class*=botTagCozy_],
+[class*=botTag_],
+[class*=botTagRegular__],
+[class*=botTag__] {
+  display: none;
+}
