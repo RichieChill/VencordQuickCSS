@@ -3,6 +3,7 @@
  */
 
 /* Hide unwanted chat buttons */
+button[aria-label*="Silent"], button[aria-label="Open Translate Modal"] { left: 20px }   /* Reposition silent typihg and translate icons if available */
 [aria-label="Apps"] { display:none; }
 [aria-label="Open GIF picker"] { display:none; }
 [aria-label="Open sticker picker"] { display:none; }
@@ -10,12 +11,24 @@
 [aria-label="Boost this server"] { display:none; }
 [id="channel-attach-THREAD"] { display:none; }
 div[class^="channelAppLauncher"] { display:none; }
+// [aria-label="Select emoji"] { display: none; }
+// button[aria-label*="Silent"] { display: none !important; }
+// button[aria-label="Open Translate Modal"] { display: none !important; }
 
 /* Hide annoying sticker popup window that appears when you type. */
 .channelTextArea-1FufC0 > .container-1ZA19X { display: none; }
 
 /* Full height emoji/sticker/gif menu */
 [class^="positionContainer_"] { height: calc(100vh - 180px); }
+
+/* Hide message timestamps in chat */
+// [class*="timestamp_"], [class*="timestampInline_"] { display: none !important; }
+
+/* Make image attachments smaller previews */
+[class*="visualMediaItemContainer_"] {
+  max-width: 300px !important;
+  object-fit: contain !important;
+}
 
 /* Clean 'Jump to present' button */
 [class^=jumpToPresentBar] {
