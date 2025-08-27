@@ -1,0 +1,52 @@
+/**
+ * Vencord QuickCSS for various chat feaatures.
+ */
+
+/* Hide unwanted chat buttons */
+[aria-label="Apps"] { display:none; }
+[aria-label="Open GIF picker"] { display:none; }
+[aria-label="Open sticker picker"] { display:none; }
+[aria-label="Send a gift"] { display:none; }
+[aria-label="Boost this server"] { display:none; }
+[id="channel-attach-THREAD"] { display:none; }
+div[class^="channelAppLauncher"] { display:none; }
+
+/* Hide annoying sticker popup window that appears when you type. */
+.channelTextArea-1FufC0 > .container-1ZA19X { display: none; }
+
+/* Full height emoji/sticker/gif menu */
+[class^="positionContainer_"] { height: calc(100vh - 180px); }
+
+/* Clean 'Jump to present' button */
+[class^=jumpToPresentBar] {
+  border: none;
+  border-radius: 0;
+  opacity: 1;
+  background-color: transparent;
+  right: unset;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+[class^=jumpToPresentBar] > [class^=barButtonMain] {
+  display: none;
+}
+[class^=jumpToPresentBar] > [class*="button__"] {
+  display: inline-block;
+  right: 20px;
+}
+
+/* Messages slide in from right in chat animation */
+[class*=isSending_] {
+    animation: slide-up .25s ease;
+}
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
